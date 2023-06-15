@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .error {
+        @apply text-red-500 font-light text-left px-2 text-sm;
+    }
+
+    .form-input {
+        @apply border border-black p-2 rounded-lg;
+    }
+
+    .form-label {
+        @apply mt-6 mb-2 text-left text-sm font-light;
+    }
+
+    .button {
+        @apply bg-blue-500 rounded-xl text-sm md:text-base md:mt-6 p-1 md:p-3 hover:bg-blue-600;
+    }
+
+    .logo-text {
+        @apply font-bold text-xl  md:text-3xl pb-12 text-blue-800 font-nature;
+    }
+    
+    .loader{
+        @apply m-auto w-screen h-screen;
+    }
+
+    .news-header{
+        @apply font-bold text-xl my-2
+    }
+    
+    .news-body {
+        @apply font-light text-base text-[#292929]
+    }
+
+    .news-card {
+        @apply p-2 border-0 border-b pb-8 border-[#e6e6e6]
+    }
+
+    .news-footer {
+        @apply pt-4 flex flex-col justify-between text-sm
+    }
+
+    .news-link {
+        @apply text-blue-500 hover:underline cursor-pointer my-2
+    }
+
+    .active {
+        @apply text-blue-500 hover:cursor-pointer border-0 border-b-2 border-blue-600
+    }
+
+    .nav-links{
+        @apply hover:cursor-pointer
+    }
+
+}
+
+@layer components {
+    @font-face {
+        font-family: 'nature';
+        src: url('./assets/fonts/NatureBeautyPersonalUse-9Y2DK.ttf') format('truetype');
+    }
+}
