@@ -25,7 +25,7 @@ RUN docker-php-ext-install mysqli pdo_mysql
 # Copy Laravel project files
 COPY . .
 
-# Install project dependencies
+# Copy env file
 COPY .env.example .env
 
 # Set directory permissions
@@ -35,4 +35,4 @@ RUN chown -R www-data:www-data /app/backend/storage /app/backend/bootstrap/cache
 # Expose port
 EXPOSE 8000
 
-CMD bash -c "composer install && php artisan migrate --force && php artisan passport:install && php artisan serve --host 0.0.0.0"
+CMD bash -c "composer install && cp .env.example .env && php artisan migrate --force && php artisan passport:install && php artisan serve --host 0.0.0.0"

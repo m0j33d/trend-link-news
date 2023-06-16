@@ -5,6 +5,8 @@ const FilterModal = ({ isOpen, onClose, onApply }) => {
     const [endDate, setEndDate] = useState('');
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     const handleStartDateChange = (e) => {
         setStartDate(e.target.value);
@@ -29,7 +31,7 @@ const FilterModal = ({ isOpen, onClose, onApply }) => {
             setErrorMessage('End date cannot be higher than the start date');
             return;
         }
-
+        setIsSubmitting(true);
         onApply(startDate, endDate, selectedOptions);
     };
     return (
@@ -101,7 +103,8 @@ const FilterModal = ({ isOpen, onClose, onApply }) => {
                         className="bg-blue-500 text-white px-4 py-2 rounded mr-2"
                         onClick={handleApplyFilter}
                         disabled={!!errorMessage}>
-                        Apply
+                        {isSubmitting ? "loading..." : "Apply"}
+
                     </button>
                     <button
                         onClick={onClose}
