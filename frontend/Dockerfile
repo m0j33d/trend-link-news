@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN npm i -g react-scripts
+# RUN npm i -g react-scripts
 RUN npm ci --only=production
 
 # Copy project files
