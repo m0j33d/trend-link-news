@@ -1,7 +1,7 @@
 
 # TrendLinkNews
 
-This a laravel backend for the news aggregator websites
+This a news aggregator websites with Laravel backend and react frontend
 
 ---
 
