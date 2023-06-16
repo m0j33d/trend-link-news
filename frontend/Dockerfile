@@ -6,10 +6,14 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
+RUN npm i -g react-scripts
 RUN npm ci --only=production
 
 # Copy project files
 COPY . .
+
+# Install project dependencies
+COPY .env.example .env
 
 # Build the React app
 RUN npm run build
