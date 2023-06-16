@@ -42,6 +42,7 @@ class NewsService
             [
                 'q' => $keyword,
                 'language' => 'en',
+                'pageSize' => 100,
                 'apiKey' => $this->newsApiKey,
             ];
 
@@ -70,6 +71,7 @@ class NewsService
     {
         $query = [
             'q' => $keyword,
+            'page-size' => 50,
             'api-key' => $this->guardianApiKey,
         ];
 

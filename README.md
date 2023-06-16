@@ -29,6 +29,14 @@ This a news aggregator websites with Laravel backend and react frontend
 
 -  For Frontend Setup check out [Trend Link News React Frontend](https://github.com/m0j33d/trend-link-news/tree/main/frontend#readme)
 
+---
+### To run feature Test
+-  run `cd backend/`
+-  run `composer install`
+-  run `php artisan run test` 
+
+-  For Frontend Setup check out [Trend Link News React Frontend](https://github.com/m0j33d/trend-link-news/tree/main/frontend#readme)
+
 
 
 ## Developer
