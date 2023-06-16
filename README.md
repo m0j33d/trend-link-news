@@ -35,8 +35,6 @@ This a news aggregator websites with Laravel backend and react frontend
 -  run `composer install`
 -  run `php artisan run test` 
 
--  For Frontend Setup check out [Trend Link News React Frontend](https://github.com/m0j33d/trend-link-news/tree/main/frontend#readme)
-
 
 
 ## Developer
